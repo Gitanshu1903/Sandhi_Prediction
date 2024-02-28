@@ -74,7 +74,7 @@ if __name__ == "__main__":
     input_text = st.text_input("Enter Sanskrit Words", "श्रीमत् हि")
 
     if st.button("Prediction"):
-        df = pd.read_csv('/content/drive/MyDrive/Sanskrit/sandhi_code_out_v1.txt', delim_whitespace=True, low_memory=True, header=None)
+        df = pd.read_csv('data_v1.txt', delim_whitespace=True, low_memory=True, header=None)
         df.columns = ['a', 'b','c', 'd', 'e']
 
         final_result = sandhi_builder(input_text)
